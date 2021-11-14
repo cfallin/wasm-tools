@@ -340,6 +340,10 @@ impl Ieee32 {
     pub fn bits(self) -> u32 {
         self.0
     }
+
+    pub fn from_bits(bits: u32) -> Ieee32 {
+        Ieee32(bits)
+    }
 }
 
 /// An IEEE binary64 immediate floating point value, represented as a u64
@@ -352,6 +356,10 @@ pub struct Ieee64(pub(crate) u64);
 impl Ieee64 {
     pub fn bits(self) -> u64 {
         self.0
+    }
+
+    pub fn from_bits(bits: u64) -> Ieee64 {
+        Ieee64(bits)
     }
 }
 
